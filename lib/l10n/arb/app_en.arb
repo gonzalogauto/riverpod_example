@@ -1,0 +1,27 @@
+{
+    "@@locale": "en",
+    "title": "Riverpod Example App",
+    "@title": {
+        "description": "Text shown in the AppBar of the Home Page"
+    },
+    "welcome": "Welcome",
+    "@welcome": {
+        "description": "Text shown in the Home Page"
+    },
+    "detail": "Detail",
+    "@detail": {
+        "description": "Text shown in the Task Page"
+    },
+    "viewTasks": "View Tasks",
+    "@viewTasks": {
+        "description": "Text shown in the Home Page"
+    },
+    "tasks": "View Tasks",
+    "@tasks": {
+        "description": "Text shown in the Tasks Page"
+    },
+    "noItemsHere": "No items here",
+    "@noItemsHere": {
+        "description": "Text shown when items list is empty"
+    }
+}
