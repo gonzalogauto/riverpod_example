@@ -24,10 +24,7 @@ class FetchTasksRef extends _$FetchTasksRef {
   Future<List<Task>> build() async {
     final tasksRepo = ref.watch(tasksRepositoryRefProvider);
     final cancelToken = CancelToken();
-    ref.onDispose(() {
-      print('DISPOSED: FetchTasksRef');
-      cancelToken.cancel();
-    });
+    ref.onDispose(cancelToken.cancel);
     return tasksRepo.fetchTasks(cancelToken: cancelToken);
   }
 }
@@ -42,10 +39,7 @@ class FetchTasksByIdRef extends _$FetchTasksByIdRef {
   }) async {
     final tasksRepo = ref.watch(tasksRepositoryRefProvider);
     final cancelToken = CancelToken();
-    ref.onDispose(() {
-      print('DISPOSED: FetchTasksByIdRef');
-      cancelToken.cancel();
-    });
+    ref.onDispose(cancelToken.cancel);
     return tasksRepo.fetchTaskById(id: taskId, cancelToken: cancelToken);
   }
 }
